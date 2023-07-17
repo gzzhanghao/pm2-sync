@@ -13,7 +13,7 @@
   "license": "MIT",
   "author": "Jason",
   "bin": {
-    "pm2-mgr": "bin/cli.js"
+    "pm2-sync": "bin/cli.js"
   },
   "files": [
     "bin",
