@@ -8,6 +8,10 @@
     "build": "swc src -d dist",
     "dev": "swc src -d dist -w"
   },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "author": "Jason",
   "license": "MIT",
   "dependencies": {
