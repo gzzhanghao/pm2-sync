@@ -1,19 +1,28 @@
 {
   "name": "pm2-sync",
   "version": "1.0.0",
-  "bin": {
-    "pm2-mgr": "./bin/cli.js"
+  "description": "Manage your pm2 apps with an ease.",
+  "homepage": "https://github.com/gzzhanghao/pm2-sync#readme",
+  "bugs": {
+    "url": "https://github.com/gzzhanghao/pm2-sync/issues"
   },
-  "scripts": {
-    "build": "swc src -d dist",
-    "dev": "swc src -d dist -w"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzzhanghao/pm2-sync.git"
+  },
+  "license": "MIT",
+  "author": "Jason",
+  "bin": {
+    "pm2-mgr": "bin/cli.js"
   },
   "files": [
     "bin",
     "dist"
   ],
-  "author": "Jason",
-  "license": "MIT",
+  "scripts": {
+    "build": "swc src -d dist",
+    "dev": "swc src -d dist -w"
+  },
   "dependencies": {
     "chalk": "^4.1.2",
     "chokidar": "^3.5.3",
