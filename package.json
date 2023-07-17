@@ -1,6 +1,6 @@
 {
   "name": "pm2-sync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manage your pm2 apps with an ease.",
   "homepage": "https://github.com/gzzhanghao/pm2-sync#readme",
   "bugs": {
