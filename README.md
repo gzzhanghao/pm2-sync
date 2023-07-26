@@ -5,7 +5,7 @@ Manage your pm2 apps with an ease.
 ## Usage
 
 ```bash
-npx pm2-sync pm2.config.js
+npx pm2-sync sync pm2.config.js
 ```
 
 Then you can see your pm2 applications listed in `pm2.conf`:
@@ -36,12 +36,22 @@ deleting delete-application...
 updated
 ```
 
-## Options
+## `pm2-sync sync`
 
-### [paths...]
+Synchronize pm2 process with process managing file.
 
-Paths to pm2 config files that provides application definitions.
+### `[path...]`
 
-### -c, --config
+Paths to pm2 [configuration files](https://pm2.keymetrics.io/docs/usage/application-declaration/).
 
-Path to the process managing config file. **Default:** `pm2.conf`
+### `-c, --config [path]`
+
+Path to process managing file. Default: `pm2.conf`.
+
+## `pm2-sync start`
+
+Start synchronize task in background with pm2. Any arguments for `sync` command can be passed.
+
+### `-n, --name [name]`
+
+Name for synchronize task in pm2.
