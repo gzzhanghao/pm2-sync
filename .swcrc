@@ -1,11 +1,16 @@
 {
-  "$schema": "https://json.schemastore.org/swcrc",
+  "$schema": "https://swc.rs/schema.json",
   "jsc": {
     "parser": {
       "syntax": "typescript"
     }
   },
+  "env": {
+    "targets": {
+      "node": "16"
+    }
+  },
   "module": {
-    "type": "commonjs"
+    "type": "es6"
   }
 }

@@ -3,7 +3,7 @@ import { promisify } from 'util';
 import chalk from 'chalk';
 import pm2 from 'pm2';
 
-import * as logger from './shared/logger';
+import * as logger from './shared/logger.js';
 
 const list = promisify(pm2.list.bind(pm2));
 const start = promisify(pm2.start.bind(pm2));

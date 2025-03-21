@@ -5,9 +5,10 @@ import { promisify } from 'util';
 import chalk from 'chalk';
 import chokidar from 'chokidar';
 import pm2 from 'pm2';
+import { tsImport } from 'tsx/esm/api';
 
-import { AppOptions, GetUserAppsFn, Pm2Manager } from '../Pm2Manager';
-import * as logger from '../shared/logger';
+import { AppOptions, GetUserAppsFn, Pm2Manager } from '../Pm2Manager.js';
+import * as logger from '../shared/logger.js';
 
 const connect = promisify(pm2.connect.bind(pm2));
 
@@ -23,8 +24,11 @@ export interface Pm2Config {
 export async function sync(paths: string[], options: StartOptions) {
   const configPath = path.resolve(options.config);
 
-  const configModules: Pm2Config[] = paths.map((filename) =>
-    require(path.resolve(filename)),
+  const configModules = await Promise.all(
+    paths.map(
+      (filename): Promise<Pm2Config> =>
+        tsImport(path.resolve(filename), import.meta.url),
+    ),
   );
 
   const mgr = new Pm2Manager(async () => {

@@ -1,7 +1,7 @@
 import { program } from 'commander';
 
-import { start } from './actions/start';
-import { sync } from './actions/sync';
+import { start } from './actions/start.js';
+import { sync } from './actions/sync.js';
 
 program
   .command('sync')

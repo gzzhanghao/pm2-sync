@@ -2,7 +2,7 @@ import { promisify } from 'util';
 
 import pm2 from 'pm2';
 
-import { log, error } from '../shared/logger';
+import { log, error } from '../shared/logger.js';
 
 const connect = promisify(pm2.connect.bind(pm2));
 
