@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'url';
 import { promisify } from 'util';
 
 import pm2 from 'pm2';
@@ -18,7 +19,7 @@ export async function start(paths: string[], options: StartOptions) {
     {
       name: options.name,
       cwd: process.cwd(),
-      script: require.resolve('../cli'),
+      script: fileURLToPath(import.meta.resolve('../cli.js')),
       args: `sync ${paths.map((p) => `"${p}"`).join(' ')} -c ${options.config}`,
     },
     (err) => {
