@@ -1,5 +1,11 @@
 # pm2-sync
 
+## 1.3.0
+
+### Minor Changes
+
+- a6aa62b: use native dynamic import instead of tsx tsImport
+
 ## 1.2.1
 
 ### Patch Changes
