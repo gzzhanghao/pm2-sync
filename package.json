@@ -21,30 +21,29 @@
     "dist"
   ],
   "scripts": {
-    "build": "swc src -d dist --strip-leading-paths",
-    "dev": "swc src -d dist --strip-leading-paths -w"
+    "build": "tsdown",
+    "dev": "tsdown --watch"
   },
   "dependencies": {
-    "chalk": "^5.4.1",
-    "chokidar": "^4.0.3",
-    "commander": "^13.1.0",
-    "pm2": "^6.0.5",
-    "tsx": "^4.19.3"
+    "chalk": "^6.0.0",
+    "chokidar": "^5.0.0",
+    "commander": "^15.0.0",
+    "pm2": "^7.0.4"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.28.1",
-    "@eslint/js": "^9.22.0",
-    "@swc/cli": "^0.6.0",
-    "@swc/core": "^1.11.11",
-    "@types/node": "^22.13.10",
-    "@typescript-eslint/eslint-plugin": "^8.27.0",
-    "@typescript-eslint/parser": "^8.27.0",
-    "eslint": "^9.22.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-oxlint": "^0.16.2",
-    "eslint-plugin-prettier": "^5.2.3",
-    "globals": "^16.0.0",
-    "typescript-eslint": "^8.27.0"
+    "@changesets/cli": "^3.0.1",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.68.0",
+    "@typescript-eslint/parser": "^8.68.0",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-oxlint": "^1.80.0",
+    "eslint-plugin-prettier": "^5.5.6",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6",
+    "tsdown": "^0.22.14",
+    "typescript-eslint": "^8.68.0"
   }
 }
