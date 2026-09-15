@@ -24,10 +24,7 @@ export async function sync(paths: string[], options: StartOptions) {
   const configPath = path.resolve(options.config);
 
   const configModules = await Promise.all(
-    paths.map(
-      (filename): Promise<Pm2Config> =>
-        import(path.resolve(filename)),
-    ),
+    paths.map((filename): Promise<Pm2Config> => import(path.resolve(filename))),
   );
 
   const mgr = new Pm2Manager(async () => {
